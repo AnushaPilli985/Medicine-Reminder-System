@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MediRemind – Add Reminder</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- EmailJS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+  <!-- ── Header ── -->
+  <header class="app-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">💊</div>
+        <span class="logo-text">MediRemind</span>
+      </a>
+      <div class="header-time" id="liveClock">00:00:00</div>
+    </div>
+  </header>
+
+  <!-- ── Page Content ── -->
+  <main class="page-wrapper">
+
+    <a href="index.html" class="btn btn-back">← Back</a>
+
+    <h1 class="page-title">Add Reminder</h1>
+    <p class="page-subtitle">Fill in your medicine details below</p>
+
+    <!-- Form card -->
+    <div class="form-card">
+      <form id="addReminderForm" novalidate>
+
+        <div class="form-grid">
+
+          <!-- Medicine Name -->
+          <div class="form-group full">
+            <label class="form-label" for="fieldName">💊 Medicine Name <span style="color:var(--danger)">*</span></label>
+            <div class="input-icon-wrap">
+              <span class="input-icon">🔤</span>
+              <input
+                class="form-input"
+                type="text"
+                id="fieldName"
+                placeholder="e.g. Paracetamol 500mg"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Dosage -->
+          <div class="form-group">
+            <label class="form-label" for="fieldDosage">📦 Dosage <span style="color:var(--danger)">*</span></label>
+            <input
+              class="form-input"
+              type="text"
+              id="fieldDosage"
+              placeholder="e.g. 1 tablet"
+              required
+            />
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label class="form-label" for="fieldEmail">📧 Email Address <span style="color:var(--danger)">*</span></label>
+            <div class="input-icon-wrap">
+              <span class="input-icon">✉️</span>
+              <input
+                class="form-input"
+                type="email"
+                id="fieldEmail"
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Date -->
+          <div class="form-group">
+            <label class="form-label" for="fieldDate">📅 Date <span style="color:var(--danger)">*</span></label>
+            <input
+              class="form-input"
+              type="date"
+              id="fieldDate"
+              required
+            />
+          </div>
+
+          <!-- Time -->
+          <div class="form-group">
+            <label class="form-label" for="fieldTime">⏰ Time <span style="color:var(--danger)">*</span></label>
+            <input
+              class="form-input"
+              type="time"
+              id="fieldTime"
+              required
+            />
+          </div>
+
+          <!-- Notes -->
+          <div class="form-group full">
+            <label class="form-label" for="fieldNotes">📝 Notes (optional)</label>
+            <textarea
+              class="form-textarea"
+              id="fieldNotes"
+              placeholder="e.g. Take after meals with a full glass of water"
+            ></textarea>
+          </div>
+
+        </div><!-- /form-grid -->
+
+        <!-- Actions -->
+        <div class="form-footer">
+          <a href="index.html" class="btn btn-outline">Cancel</a>
+          <button type="submit" class="btn btn-save">💾 Save Reminder</button>
+        </div>
+
+      </form>
+    </div><!-- /form-card -->
+
+  </main>
+
+  <!-- Toast container is injected by script.js -->
+  <script src="script.js"></script>
+</body>
+</html>

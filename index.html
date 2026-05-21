@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MediRemind – My Reminders</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- EmailJS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+  <!-- ── Header ── -->
+  <header class="app-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">💊</div>
+        <span class="logo-text">MediRemind</span>
+      </a>
+      <div class="header-time" id="liveClock">00:00:00</div>
+    </div>
+  </header>
+
+  <!-- ── Page Content ── -->
+  <main class="page-wrapper">
+
+    <!-- Top bar: title + Add button -->
+    <div class="top-bar">
+      <div>
+        <h1 class="page-title">My Reminders</h1>
+        <p class="page-subtitle">Stay on track with your medications</p>
+      </div>
+      <a href="add.html" class="btn btn-primary">
+        <span>＋</span> Add Reminder
+      </a>
+    </div>
+
+    <!-- Stats strip -->
+    <div class="stats-strip" id="statsStrip"></div>
+
+    <!-- Reminders list — populated by script.js -->
+    <div class="reminders-grid" id="remindersContainer">
+      <!-- Cards injected here -->
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
